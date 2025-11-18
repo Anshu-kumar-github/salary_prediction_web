@@ -14,12 +14,12 @@ education = st.selectbox("Education Level", ["Bachelor's", "Master's", "PhD"])
 job_title = st.selectbox("Job Title", job_titles)
 experience = st.number_input("Years of Experience", min_value=0, max_value=50, value=5)
 
-MIN_GAP = 16   # Minimum required difference (You can adjust this)
+MIN_GAP = 16   
 
 if st.button("Predict"):
 
     if age - experience < MIN_GAP:
-        st.error(f"❌ Invalid Entry: Age - Experience must be at least {MIN_GAP} years.")
+        .error(f"❌ Invalid Entry: Age - Differestnce between age and experience must be at least {MIN_GAP} years.")
     
     else:
         sample = pd.DataFrame([{
