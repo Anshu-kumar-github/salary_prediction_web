@@ -19,7 +19,7 @@ MIN_GAP = 16
 if st.button("Predict"):
 
     if age - experience < MIN_GAP:
-        st.error(f"❌ Invalid Entry: Age - Differestnce between age and experience must be at least {MIN_GAP} years.")
+        st.error(f"❌ Invalid Entry: Age - Difference between age and experience must be at least {MIN_GAP} years.")
     
     else:
         sample = pd.DataFrame([{
@@ -32,4 +32,5 @@ if st.button("Predict"):
 
         predicted_salary = model.predict(sample)[0]
         st.success(f"Estimated Salary: ₹{predicted_salary:,.02f}")
+
 
